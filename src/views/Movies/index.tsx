@@ -1,31 +1,23 @@
-import { useEffect, useState } from "react";
-import type { Movie } from "../../model/movies.models";
-import { getPopularMovies } from "../../services/movies.service";
 import MovieCard from "../../components/MovieCard";
-import "./Movies.css";
+import { useMovies } from "../../hooks/useMovies";
+import styles from "./Movies.module.css";
 
 const Movies = () => {
-  const [movies, setMovies] = useState<Movie[]>([]);
-
-  useEffect(() => {
-    getPopularMovies()
-      .then(({ data }) => setMovies(data.results))
-      .catch((error) => console.error(error));
-  }, []);
+  const movies = useMovies();
 
   return (
-    <>
+    <main>
       <h2>Popular Movies</h2>
-      <div className="container-movies">
+      <section className={styles.containerMovies}>
         {
-          movies.map((movie, index) => {
+          movies.map((movie) => {
             return (
-              <MovieCard key={index} movie={movie} />
+              <MovieCard key={movie.id} movie={movie} />
             )
           })
         }
-      </div>
-    </>
+      </section>
+    </main>
   )
 };
 

@@ -1,28 +1,35 @@
-.title-movie {
-  height: 36px;
+.title {
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.container-movie {
+.movieContainer {
+  color: var(--text);
   position: relative;
   border-radius: 8px;
   border: 1px solid var(--border);
+  box-shadow: var(--shadow);
 }
 
-.movie-overview {
+.movieContainer:hover {
+  color: var(--text-h);
+}
+
+.overview {
   overflow-y: scroll;
   height: 70px;
 }
 
-img {
+.folder {
   width: 200px;
-  height: 300px;
+  height: calc(100% - 40px);
   object-fit: cover;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
-
-span {
+.voteAverage {
   display: flex;
   padding: 5px;
   font-size: 12px;
@@ -35,17 +42,10 @@ span {
   }
 }
 
-.movie-release {
-  position: absolute;
-  top: 40px;
-  left: 5px;
-  z-index: 100;
-}
-
-.movie-vote-average {
+.voteAverage {
   padding-left: 5px;
   position: absolute;
-  bottom: 80px;
+  bottom: 5px;
   right: 5px;
   z-index: 100;
 }

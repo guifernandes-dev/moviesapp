@@ -1,6 +1,6 @@
 import { moviesApis } from "../config/http";
-import type { ApiResp } from "../model/movies.models";
+import type { IMovieDetail, IMovieList } from "../model/movies.models";
 
-export const getPopularMovies = () => moviesApis.get<ApiResp>('movie/popular');
+export const getPopularMovies = () => moviesApis.get<IMovieList>('movie/popular');
 
-export const getMovie = (movieId: number) => moviesApis.get(`movie/${movieId}`);
+export const getMovie = (movieId: number) => moviesApis.get<IMovieDetail>(`movie/${movieId}`);

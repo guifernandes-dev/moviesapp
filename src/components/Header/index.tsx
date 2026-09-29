@@ -1,12 +1,12 @@
 import { NavLink } from "react-router-dom";
-import './Header.css';
+import styles from './Header.module.css';
 
 type PropsNavLink = {
   isActive: boolean
 };
 
 const Header = () => {
-  const fnClassLink = ({ isActive }: PropsNavLink) => isActive ? "activePage" : "";
+  const fnClassLink = ({ isActive }: PropsNavLink) => isActive ? styles.activePage : "";
 
   return (
     <header>

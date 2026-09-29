@@ -1,0 +1,32 @@
+.movieFolder {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.movieDetailContainer {
+  width: 95%;
+  max-width: 800px;
+  padding: 20px;
+  border-radius: 16px;
+  background-color: RGBA(0, 0, 0, 0.7);
+}
+
+.movieDetailContent {
+  display: flex;
+  gap: 10px;
+}
+
+.productionCompLogo {
+  width: 100px;
+  background-color: var(--text-h);
+  padding: 3px;
+  border-radius: 3px;
+}
+
+.productionCompContainer {
+  display: flex;
+  gap: 3px;
+  flex-wrap: wrap;
+}
