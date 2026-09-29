@@ -1,0 +1,51 @@
+.title-movie {
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-movie {
+  position: relative;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+.movie-overview {
+  overflow-y: scroll;
+  height: 70px;
+}
+
+img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+}
+
+span {
+  display: flex;
+  padding: 5px;
+  font-size: 12px;
+  line-height: 110%;
+  background-color: RGBA(0, 0, 0, 0.5);
+  border-radius: 8px;
+
+  @media (max-width: 1024px) {
+    font-size: 10px;
+  }
+}
+
+.movie-release {
+  position: absolute;
+  top: 40px;
+  left: 5px;
+  z-index: 100;
+}
+
+.movie-vote-average {
+  padding-left: 5px;
+  position: absolute;
+  bottom: 80px;
+  right: 5px;
+  z-index: 100;
+}
